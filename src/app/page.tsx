@@ -29,9 +29,47 @@ export default function Home() {
     { nome: "LOW PRESSURE FITNESS", img: "/lpf.png" },
   ];
 
+  const especialistas = [
+    {
+      nome: "Samara",
+      especialidade: "Fisioterapeuta",
+      foto: "/samaraFisio.JPG",
+    },
+    {
+      nome: "Andressa",
+      especialidade: "Fisioterapeuta",
+      foto: "/andressaFisio.JPG",
+    },
+    {
+      nome: "Cleiton",
+      especialidade: "Fisioterapeuta",
+      foto: "/cleitonFisio.jpg",
+    },
+    {
+      nome: "Sirleide",
+      especialidade: "Podóloga",
+      foto: "/sirleidePodologa.JPG",
+    },
+    {
+      nome: "Rodrigo",
+      especialidade: "Fisioterapeuta",
+      foto: "/rodrigoFisio.JPG",
+    },
+    {
+      nome: "Ruth",
+      especialidade: "Fisioterapeuta",
+      foto: "/ruthFisio.JPG",
+    },
+    {
+      nome: "Solange",
+      especialidade: "Esteticista",
+      foto: "/solangeEsteticista.JPG",
+    },
+  ];
+
   return (
     <main className="flex flex-col">
-      {/* Seção Home - imagem de fundo */}
+      {/* Seção Home */}
       <section
         id="home"
         className="relative w-full h-screen flex items-center justify-center"
@@ -42,7 +80,6 @@ export default function Home() {
           fill
           className="object-cover opacity-35"
         />
-        {/* Overlay com logo e frases */}
         <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
           <Image src="/logo.png" alt="Logo Nuva" width={620} height={620} />
           <h1 className="text-4xl md:text-4xl font-bold mt-16">
@@ -51,8 +88,6 @@ export default function Home() {
           <p className="text-xl md:text-2xl mt-10 max-full">
             Fisioterapia, pilates e bem-estar em um espaço pensado para você.
           </p>
-
-          {/* Botão para WhatsApp */}
           <a
             href="https://wa.me/554896791449?text=Olá,%20quero%20agendar%20meu%20horário!"
             target="_blank"
@@ -75,7 +110,6 @@ export default function Home() {
           </h2>
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
-
         <p className="text-black text-3xl ml-10 max-full mt-12 mb-12">
           A Nuva é mais do que uma clínica de fisioterapia. É um espaço de cuidado,
           movimento e presença, onde cada pessoa é recebida com atenção verdadeira.
@@ -83,10 +117,11 @@ export default function Home() {
           Criada por fisioterapeutas apaixonadas pelo que fazem, a Nuva acredita que
           o bem-estar não se impõe, se cultiva.
           <br />
-          Aqui, cada corpo se reconecta com sua
-          leveza, reencontra seu ritmo e se transforma de forma suave, contínua.
+          Aqui, cada corpo se reconecta com sua leveza, reencontra seu ritmo e se
+          transforma de forma suave, contínua.
         </p>
 
+        {/* Scroll de imagens */}
         <div className="relative w-full flex items-center">
           <button
             onClick={scrollLeft}
@@ -94,10 +129,9 @@ export default function Home() {
           >
             <FaChevronLeft size={28} />
           </button>
-
           <div
             ref={scrollRef}
-            className="w-full overflow-x-auto flex space-x-16 scroll-smooth py-4"
+            className="w-full overflow-x-auto flex space-x-4 scroll-smooth py-4"
           >
             {[22, 24, 37, 39, 53, 55].map((num) => (
               <div
@@ -114,7 +148,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
           <button
             onClick={scrollRight}
             className="absolute right-0 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
@@ -129,30 +162,27 @@ export default function Home() {
         id="servicos"
         className="w-full py-35 bg-white flex flex-col items-start px-6"
       >
-        <div className="w-full flex items-center mt-12 mb-8">
+        <div className="w-full flex items-center mt-9 mb-8">
           <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
             SERVIÇOS
           </h2>
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 mt-12 lg:grid-cols-4 gap-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12 justify-items-center w-full">
           {servicos.map((servico) => (
             <div
               key={servico.nome}
-              className="relative w-full h-64  overflow-hidden group shadow-lg"
+              className="relative w-full max-w-[440px] h-[500px] overflow-hidden group shadow-lg rounded-2xl"
             >
               <Image
                 src={servico.img}
                 alt={servico.nome}
                 fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 440px"
+                className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)] group-hover:bg-[rgba(0,0,0,0.8)] transition"></div>
-
-
-
-
+              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4">
                 <h3 className="text-2xl font-bold mb-4">{servico.nome}</h3>
                 <button className="border border-white px-6 py-2 mt-5 text-white hover:bg-white hover:text-black transition">
@@ -167,12 +197,43 @@ export default function Home() {
       {/* Seção Especialistas */}
       <section
         id="especialistas"
-        className="w-full py-20 bg-white flex flex-col items-center"
+        className="w-full flex flex-col items-start px-6"
       >
-        <h2 className="text-3xl font-bold mb-6">Especialistas</h2>
-        <p className="max-w-3xl text-center text-lg">
-          Perfil dos especialistas e equipe.
-        </p>
+        <div className="w-full flex items-center mt-32 mb-8">
+          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
+            ESPECIALISTAS
+          </h2>
+          <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
+        </div>
+
+        <div className="w-full bg-[#1F526F] py-12 flex flex-col items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full px-6">
+            {especialistas.map((esp) => (
+              <div
+                key={esp.nome}
+                className="bg-white rounded-2xl shadow-lg flex flex-col items-center p-4 w-full max-w-[280px] h-[400px]"
+              >
+                {/* Foto ocupa a parte superior do retângulo */}
+                <div className="w-45 h-70 relative mb-4 rounded-t-2xl overflow-hidden">
+                  <Image
+                    src={esp.foto}
+                    alt={esp.nome}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Nome e especialidade */}
+                <div className="flex flex-col items-center justify-center mt-auto">
+                  <h3 className="text-2xl font-bold text-black text-center">
+                    {esp.nome}
+                  </h3>
+                  <p className="text-black text-xl text-center">{esp.especialidade}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Seção Contato */}
