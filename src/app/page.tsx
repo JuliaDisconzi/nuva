@@ -18,6 +18,17 @@ export default function Home() {
     }
   };
 
+  const servicos = [
+    { nome: "ESTÉTICA", img: "/estetica.jpg" },
+    { nome: "PILATES", img: "/pilates.jpg" },
+    { nome: "PODOLOGIA", img: "/podologia.jpg" },
+    { nome: "FISIOTERAPIA", img: "/fisioterapia.jpg" },
+    { nome: "SEITAI", img: "/seitai.jpg" },
+    { nome: "LIBERAÇÃO MIOFACIAL", img: "/liberacao.jpg" },
+    { nome: "ACUPUNTURA", img: "/acupuntura.jpg" },
+    { nome: "LOW PRESSURE FITNESS", img: "/lpf.png" },
+  ];
+
   return (
     <main className="flex flex-col">
       {/* Seção Home - imagem de fundo */}
@@ -32,8 +43,8 @@ export default function Home() {
           className="object-cover opacity-35"
         />
         {/* Overlay com logo e frases */}
-        <div className="absolute flex flex-col items-center text-center text-black px-4">
-          <Image src="/logo.png" alt="Logo Nuva" width={720} height={720} />
+        <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
+          <Image src="/logo.png" alt="Logo Nuva" width={620} height={620} />
           <h1 className="text-4xl md:text-4xl font-bold mt-16">
             Onde o corpo respira e a mente se renova.
           </h1>
@@ -54,12 +65,10 @@ export default function Home() {
       </section>
 
       {/* Seção Sobre Nós */}
-      
       <section
         id="sobre-nos"
         className="w-full py-35 bg-white flex flex-col items-start px-6"
       >
-        {/* Título e linha */}
         <div className="w-full flex items-center mb-8">
           <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
             SOBRE NÓS
@@ -67,21 +76,18 @@ export default function Home() {
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
 
-        {/* Texto explicativo */}
-        <p className="text-black text-3xl ml-10 max-full mb-12">
+        <p className="text-black text-3xl ml-10 max-full mt-12 mb-12">
           A Nuva é mais do que uma clínica de fisioterapia. É um espaço de cuidado,
           movimento e presença, onde cada pessoa é recebida com atenção verdadeira.
           <br />
           Criada por fisioterapeutas apaixonadas pelo que fazem, a Nuva acredita que
-          o bem-estar não se impõe, se cultiva. 
+          o bem-estar não se impõe, se cultiva.
           <br />
           Aqui, cada corpo se reconecta com sua
           leveza, reencontra seu ritmo e se transforma de forma suave, contínua.
         </p>
 
-        {/* Galeria de imagens com setas */}
         <div className="relative w-full flex items-center">
-          {/* Botão esquerda */}
           <button
             onClick={scrollLeft}
             className="absolute left-0 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
@@ -89,7 +95,6 @@ export default function Home() {
             <FaChevronLeft size={28} />
           </button>
 
-          {/* Container das imagens */}
           <div
             ref={scrollRef}
             className="w-full overflow-x-auto flex space-x-16 scroll-smooth py-4"
@@ -110,7 +115,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Botão direita */}
           <button
             onClick={scrollRight}
             className="absolute right-0 z-10 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
@@ -120,16 +124,44 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Seção Serviços */}
       <section
         id="servicos"
-        className="w-full py-20 bg-[#FBFFF5] flex flex-col items-center"
+        className="w-full py-35 bg-white flex flex-col items-start px-6"
       >
-        <h2 className="text-3xl font-bold mb-6">Serviços</h2>
-        <p className="max-w-3xl text-center text-lg">
-          Descrição dos serviços oferecidos.
-        </p>
+        <div className="w-full flex items-center mt-12 mb-8">
+          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
+            SERVIÇOS
+          </h2>
+          <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 mt-12 lg:grid-cols-4 gap-8 w-full">
+          {servicos.map((servico) => (
+            <div
+              key={servico.nome}
+              className="relative w-full h-64  overflow-hidden group shadow-lg"
+            >
+              <Image
+                src={servico.img}
+                alt={servico.nome}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)] group-hover:bg-[rgba(0,0,0,0.8)] transition"></div>
+
+
+
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4">
+                <h3 className="text-2xl font-bold mb-4">{servico.nome}</h3>
+                <button className="border border-white px-6 py-2 mt-5 text-white hover:bg-white hover:text-black transition">
+                  SABER MAIS
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Seção Especialistas */}
