@@ -78,8 +78,9 @@ export default function Home() {
           src="/fundo.jpg"
           alt="Fundo"
           fill
-          className="object-cover opacity-35"
+          className="object-cover opacity-10 md:opacity-35"
         />
+
         <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
           <Image src="/logo.png" alt="Logo Nuva" width={620} height={620} />
           <h1 className="text-4xl md:text-4xl font-bold mt-16">
@@ -197,7 +198,7 @@ export default function Home() {
       {/* Seção Especialistas */}
       <section
         id="especialistas"
-        className="w-full flex flex-col items-start px-6"
+        className="w-full  bg-white flex flex-col items-center px-6"
       >
         <div className="w-full flex items-center mt-32 mb-8">
           <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
@@ -207,7 +208,7 @@ export default function Home() {
         </div>
 
         <div className="w-full bg-[#1F526F] py-12 flex flex-col items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  justify-items-center w-full max-w-40xl px-6">
             {especialistas.map((esp) => (
               <div
                 key={esp.nome}
