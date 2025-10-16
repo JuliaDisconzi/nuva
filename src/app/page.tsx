@@ -69,7 +69,6 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      {/* Seção Home */}
       <section
         id="home"
         className="relative w-full h-screen flex items-center justify-center"
@@ -78,8 +77,11 @@ export default function Home() {
           src="/fundo.jpg"
           alt="Fundo"
           fill
-          className="object-cover opacity-10 md:opacity-35"
+          className="object-cover"
         />
+
+        {/* camada branca translúcida por cima */}
+        <div className="absolute inset-0 bg-white/80 sm:bg-white/70 md:bg-white/60 lg:bg-white/50"></div>
 
         <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
           <Image src="/logo.png" alt="Logo Nuva" width={620} height={620} />
@@ -99,6 +101,7 @@ export default function Home() {
           </a>
         </div>
       </section>
+
 
       {/* Seção Sobre Nós */}
       <section
