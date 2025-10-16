@@ -80,7 +80,7 @@ export default function Home() {
           className="object-cover"
         />
 
-        {/* camada branca translúcida por cima */}
+
         <div className="absolute inset-0 bg-white/80 sm:bg-white/70 md:bg-white/60 lg:bg-white/50"></div>
 
         <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
@@ -103,7 +103,6 @@ export default function Home() {
       </section>
 
 
-      {/* Seção Sobre Nós */}
       <section
         id="sobre-nos"
         className="w-full py-35 bg-white flex flex-col items-start px-6"
@@ -125,7 +124,6 @@ export default function Home() {
           transforma de forma suave, contínua.
         </p>
 
-        {/* Scroll de imagens */}
         <div className="relative w-full flex items-center">
           <button
             onClick={scrollLeft}
@@ -161,7 +159,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção Serviços */}
       <section
         id="servicos"
         className="w-full py-35 bg-white flex flex-col items-start px-6"
@@ -198,7 +195,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção Especialistas */}
       <section
         id="especialistas"
         className="w-full  bg-white flex flex-col items-center px-6"
@@ -217,7 +213,6 @@ export default function Home() {
                 key={esp.nome}
                 className="bg-white rounded-2xl shadow-lg flex flex-col items-center p-4 w-full max-w-[280px] h-[400px]"
               >
-                {/* Foto ocupa a parte superior do retângulo */}
                 <div className="w-45 h-70 relative mb-4 rounded-t-2xl overflow-hidden">
                   <Image
                     src={esp.foto}
@@ -227,7 +222,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Nome e especialidade */}
                 <div className="flex flex-col items-center justify-center mt-auto">
                   <h3 className="text-2xl font-bold text-black text-center">
                     {esp.nome}
@@ -240,16 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção Contato */}
-      <section
-        id="contato"
-        className="w-full py-20 bg-[#FBFFF5] flex flex-col items-center"
-      >
-        <h2 className="text-3xl font-bold mb-6">Contato</h2>
-        <p className="max-w-3xl text-center text-lg">
-          Informações de contato, formulário ou telefone.
-        </p>
-      </section>
+     
     </main>
   );
 }

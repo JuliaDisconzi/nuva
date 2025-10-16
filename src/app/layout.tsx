@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import { Outfit } from "next/font/google";
 
@@ -25,7 +26,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* Footer em todas as páginas */}
-        
+        <Footer />
       </body>
     </html>
   );
