@@ -53,7 +53,7 @@ export default function Podologia() {
                 <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
                     <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
-                            src="/podo1.png"
+                            src="/podo1.jpg"
                             alt="Podologia"
                             className="object-cover rounded-2xl"
                             sizes="(max-width: 768px) 100vw, 50vw"
