@@ -45,18 +45,19 @@ export default function Seitai() {
                 </div>
 
                 {/* LADO DIREITO - IMAGEM */}
-
-                
-                <div className="flex-1 flex justify-center md:justify-end w-full">
+                <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
                     <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
                             src="/seitai.jpg"
+                            alt="Seitai"
                             fill
                             className="object-cover rounded-2xl"
-                            alt="Seitai"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
+
+
 
 
             </div>
