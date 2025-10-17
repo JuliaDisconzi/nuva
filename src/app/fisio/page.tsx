@@ -52,7 +52,7 @@ export default function Fisioterapia() {
         <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
           <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
             <Image
-              src="/fisio1.webp"
+              src="/fisio.jpg"
               alt="Fisioterapia"
               fill
               className="object-cover rounded-2xl"
