@@ -19,7 +19,7 @@ export default function Fisioterapia() {
       // px-6/8 garante espaçamento lateral responsivo
       className="w-full min-h-screen bg-white flex flex-col items-center pt-28 px-6 sm:px-8"
     >
-     
+
       <div className="w-full max-w-6xl text-left mb-10">
         <h2 className="text-4xl font-bold text-[#1F526F] mb-3">
           FISIOTERAPIA
@@ -46,19 +46,19 @@ export default function Fisioterapia() {
         </div>
 
         {/* LADO DIREITO - IMAGEM */}
-        <div className="flex-1 flex justify-center md:justify-end">
-          <div className="relative w-full max-w-sm h-72 sm:h-80 md:h-96">
+        
+        <div className="flex-1 flex justify-center md:justify-end mt-6 md:mt-0">
+          <div className="relative w-full sm:w-80 md:w-full h-72 sm:h-80 md:h-96">
             <Image
               src="/fisio.jpg"
               alt="Fisioterapia"
               fill
-              // object-cover ajusta a imagem sem distorcer
-              // rounded-2xl deixa bordas arredondadas
-              // shadow-lg adiciona sombra suave
               className="object-cover rounded-2xl shadow-lg"
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 40vw, 33vw"
             />
           </div>
         </div>
+
       </div>
 
       {/* --- BLOCO DE SERVIÇOS --- */}
@@ -94,13 +94,13 @@ export default function Fisioterapia() {
         ))}
       </div>
       <a
-            href="https://wa.me/554896791449?text=Olá,%20quero%20agendar%20meu%20horário!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-12 mb-50 px-12 py-5 border-2 border-[#1F526F] text-[#1F526F] font-semibold rounded hover:bg-[#1F526F] hover:text-white transition text-3xl"
-          >
-            Agende seu horário
-          </a>
+        href="https://wa.me/554896791449?text=Olá,%20quero%20agendar%20meu%20horário!"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-12 mb-50 px-12 py-5 border-2 border-[#1F526F] text-[#1F526F] font-semibold rounded hover:bg-[#1F526F] hover:text-white transition text-3xl"
+      >
+        Agende seu horário
+      </a>
     </main>
   );
 }
