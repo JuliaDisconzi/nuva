@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Link from "next/link"; // <-- Import necessário
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,70 +20,33 @@ export default function Home() {
   };
 
   const servicos = [
-    { nome: "ESTÉTICA", img: "/estetica.jpg" },
-    { nome: "PILATES", img: "/pilates.jpg" },
-    { nome: "PODOLOGIA", img: "/podologia.jpg" },
-    { nome: "FISIOTERAPIA", img: "/fisioterapia.jpg" },
-    { nome: "SEITAI", img: "/seitai.jpg" },
-    { nome: "LIBERAÇÃO MIOFACIAL", img: "/liberacao.jpg" },
-    { nome: "ACUPUNTURA", img: "/acupuntura.jpg" },
-    { nome: "LOW PRESSURE FITNESS", img: "/lpf.png" },
+    { nome: "FISIOTERAPIA", img: "/fisioterapia.jpg", id: "fisio" },
+    { nome: "PODOLOGIA", img: "/podologia.jpg", id: "Podologia" },
+    { nome: "ESTÉTICA", img: "/estetica.jpg", id: "Estetica" },
+    { nome: "PILATES", img: "/pilates.jpg", id: "Pilates" },
+    { nome: "SEITAI", img: "/seitai.jpg", id: "Seitai" },
+    { nome: "LIBERAÇÃO MIOFACIAL", img: "/liberacao.jpg", id: "LibMioface" },
+    { nome: "ACUPUNTURA", img: "/acupuntura.jpg", id: "Acupuntura" },
+    { nome: "LOW PRESSURE FITNESS", img: "/lpf.png", id: "LPF" },
   ];
 
   const especialistas = [
-    {
-      nome: "Samara",
-      especialidade: "Fisioterapeuta",
-      foto: "/samaraFisio.JPG",
-    },
-    {
-      nome: "Andressa",
-      especialidade: "Fisioterapeuta",
-      foto: "/andressaFisio.JPG",
-    },
-    {
-      nome: "Cleiton",
-      especialidade: "Fisioterapeuta",
-      foto: "/cleitonFisio.jpg",
-    },
-    {
-      nome: "Sirleide",
-      especialidade: "Podóloga",
-      foto: "/sirleidePodologa.JPG",
-    },
-    {
-      nome: "Rodrigo",
-      especialidade: "Fisioterapeuta",
-      foto: "/rodrigoFisio.JPG",
-    },
-    {
-      nome: "Ruth",
-      especialidade: "Fisioterapeuta",
-      foto: "/ruthFisio.JPG",
-    },
-    {
-      nome: "Solange",
-      especialidade: "Esteticista",
-      foto: "/solangeEsteticista.JPG",
-    },
+    { nome: "Samara", especialidade: "Fisioterapeuta", foto: "/samaraFisio.JPG" },
+    { nome: "Andressa", especialidade: "Fisioterapeuta", foto: "/andressaFisio.JPG" },
+    { nome: "Cleiton", especialidade: "Fisioterapeuta", foto: "/cleitonFisio.jpg" },
+    { nome: "Sirleide", especialidade: "Podóloga", foto: "/sirleidePodologa.JPG" },
+    { nome: "Rodrigo", especialidade: "Fisioterapeuta", foto: "/rodrigoFisio.JPG" },
+    { nome: "Ruth", especialidade: "Fisioterapeuta", foto: "/ruthFisio.JPG" },
+    { nome: "Solange", especialidade: "Esteticista", foto: "/solangeEsteticista.JPG" },
   ];
 
   return (
     <main className="flex flex-col">
-      <section
-        id="home"
-        className="relative w-full h-screen flex items-center justify-center"
-      >
-        <Image
-          src="/fundo.jpg"
-          alt="Fundo"
-          fill
-          className="object-cover"
-        />
 
-
+      {/* Seção Home */}
+      <section id="home" className="relative w-full h-screen flex items-center justify-center">
+        <Image src="/fundo.jpg" alt="Fundo" fill className="object-cover" />
         <div className="absolute inset-0 bg-white/80 sm:bg-white/70 md:bg-white/60 lg:bg-white/50"></div>
-
         <div className="absolute flex flex-col items-center mt-40 text-center text-black px-4">
           <Image src="/logo.png" alt="Logo Nuva" width={620} height={620} />
           <h1 className="text-4xl md:text-4xl font-bold mt-16">
@@ -102,15 +66,10 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section
-        id="sobre-nos"
-        className="w-full py-35 bg-white flex flex-col items-start px-6"
-      >
+      {/* Seção Sobre Nós */}
+      <section id="sobre-nos" className="w-full py-35 bg-white flex flex-col items-start px-6">
         <div className="w-full flex items-center mb-8">
-          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
-            SOBRE NÓS
-          </h2>
+          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">SOBRE NÓS</h2>
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
         <p className="text-black text-3xl ml-10 max-full mt-12 mb-12">
@@ -124,6 +83,7 @@ export default function Home() {
           transforma de forma suave, contínua.
         </p>
 
+        {/* Galeria Horizontal */}
         <div className="relative w-full flex items-center">
           <button
             onClick={scrollLeft}
@@ -131,22 +91,10 @@ export default function Home() {
           >
             <FaChevronLeft size={28} />
           </button>
-          <div
-            ref={scrollRef}
-            className="w-full overflow-x-auto flex space-x-4 scroll-smooth py-4"
-          >
+          <div ref={scrollRef} className="w-full overflow-x-auto flex space-x-4 scroll-smooth py-4">
             {[22, 24, 37, 39, 53, 55].map((num) => (
-              <div
-                key={num}
-                className="flex-shrink-0 w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg"
-              >
-                <Image
-                  src={`/nuva-${num}.jpg`}
-                  alt={`Nuva ${num}`}
-                  width={280}
-                  height={180}
-                  className="object-cover w-full h-full"
-                />
+              <div key={num} className="flex-shrink-0 w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg">
+                <Image src={`/nuva-${num}.jpg`} alt={`Nuva ${num}`} width={280} height={180} className="object-cover w-full h-full" />
               </div>
             ))}
           </div>
@@ -159,14 +107,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="servicos"
-        className="w-full py-35 bg-white flex flex-col items-start px-6"
-      >
+      {/* Seção Serviços */}
+      <section id="servicos" className="w-full py-35 bg-white flex flex-col items-start px-6">
         <div className="w-full flex items-center mt-9 mb-8">
-          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
-            SERVIÇOS
-          </h2>
+          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">SERVIÇOS</h2>
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
 
@@ -186,46 +130,37 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4">
                 <h3 className="text-2xl font-bold mb-4">{servico.nome}</h3>
-                <button className="border border-white px-6 py-2 mt-5 text-white hover:bg-white hover:text-black transition">
+                <Link
+                  href={`/${servico.id}`} // Navega para a página do serviço
+                  className="border border-white px-6 py-2 mt-5 text-white hover:bg-white hover:text-black transition"
+                >
                   SABER MAIS
-                </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section
-        id="especialistas"
-        className="w-full  bg-white flex flex-col items-center px-6"
-      >
+      {/* Seção Especialistas */}
+      <section id="especialistas" className="w-full bg-white flex flex-col items-center px-6">
         <div className="w-full flex items-center mt-32 mb-8">
-          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">
-            ESPECIALISTAS
-          </h2>
+          <h2 className="text-3xl font-bold text-[#5373A9] mr-4 whitespace-nowrap">ESPECIALISTAS</h2>
           <div className="flex-1 h-1 bg-[#D9D9D9]"></div>
         </div>
 
         <div className="w-full bg-[#1F526F] py-12 flex flex-col items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  justify-items-center w-full max-w-40xl px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center w-full max-w-40xl px-6">
             {especialistas.map((esp) => (
               <div
                 key={esp.nome}
                 className="bg-white rounded-2xl shadow-lg flex flex-col items-center p-4 w-full max-w-[280px] h-[400px]"
               >
                 <div className="w-45 h-70 relative mb-4 rounded-t-2xl overflow-hidden">
-                  <Image
-                    src={esp.foto}
-                    alt={esp.nome}
-                    fill
-                    className="object-cover"
-                  />
+                  <Image src={esp.foto} alt={esp.nome} fill className="object-cover" />
                 </div>
-
                 <div className="flex flex-col items-center justify-center mt-auto">
-                  <h3 className="text-2xl font-bold text-black text-center">
-                    {esp.nome}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-black text-center">{esp.nome}</h3>
                   <p className="text-black text-xl text-center">{esp.especialidade}</p>
                 </div>
               </div>
@@ -233,8 +168,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-     
     </main>
   );
 }
