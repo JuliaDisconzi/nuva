@@ -51,18 +51,20 @@ export default function LibMioface() {
                 </div>
 
                 {/* LADO DIREITO - IMAGEM */}
+
                 
-                <div className="flex-1 flex justify-center md:justify-end mt-6 md:mt-0">
-                    <div className="relative w-full sm:w-80 md:w-full h-72 sm:h-80 md:h-96">
+                <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
+                    <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
                             src="/liberacao.jpg"
                             alt="Liberação Miofacial"
                             fill
-                            className="object-cover rounded-2xl shadow-lg"
-                            sizes="(max-width: 640px) 90vw, (max-width: 768px) 40vw, 33vw"
+                            className="object-cover rounded-2xl"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
+
 
             </div>
 
