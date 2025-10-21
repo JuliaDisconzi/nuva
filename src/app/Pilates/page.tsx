@@ -41,19 +41,21 @@ export default function Pilates() {
                 {/* LADO ESQUERDO - TEXTO */}
                 <div className="flex-1 text-left">
                     <p className="text-black text-2xl leading-relaxed">
-                        O Pilates é um método de condicionamento físico que fortalece o corpo e a mente ao mesmo tempo. Por meio de exercícios controlados, trabalha a força, a flexibilidade, o equilíbrio e a coordenação, sempre respeitando os limites individuais de cada pessoa. Ideal para quem busca melhorar a postura, reduzir dores musculares e ganhar consciência corporal, o Pilates também oferece benefícios para a mente, ajudando a reduzir o estresse e aumentar o bem-estar. É uma prática segura, adaptável a todas as idades e níveis de condicionamento físico, proporcionando resultados duradouros e uma sensação geral de leveza e energia.
+                        Mais do que um exercício, o Pilates é um método que une força, equilíbrio e consciência corporal. Focado no controle dos movimentos e na respiração, melhora a postura, flexibilidade e estabilidade, promovendo bem-estar e qualidade de vida em todas as idades.
+
                     </p>
                 </div>
 
                 {/* LADO DIREITO - IMAGEM */}
 
-               
+
 
                 <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
                     <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
                             src="/fisio1.webp"
                             alt="Pilates"
+                            fill
                             className="object-cover rounded-2xl"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />

@@ -42,11 +42,7 @@ export default function LibMioface() {
                 {/* LADO ESQUERDO - TEXTO */}
                 <div className="flex-1 text-left">
                     <p className="text-black text-2xl leading-relaxed">
-                        A Liberação Miofascial é uma técnica terapêutica que atua sobre a fáscia — uma fina camada de tecido que envolve músculos, órgãos e articulações — promovendo o relaxamento das áreas tensionadas e a restauração da mobilidade natural do corpo.
-
-                        Por meio de movimentos suaves e pressões direcionadas, a liberação miofascial ajuda a reduzir dores, melhorar a postura e restaurar a flexibilidade. É indicada para pessoas com dores crônicas, atletas que desejam melhorar desempenho e qualquer pessoa que queira prevenir lesões e manter o corpo equilibrado e funcional.
-
-                        O tratamento proporciona bem-estar imediato, sensação de leveza muscular e melhora na qualidade de vida, atuando de forma preventiva e terapêutica.
+                        Método manual que trabalha o relaxamento das fáscias musculares, melhorando a mobilidade, reduzindo dores e prevenindo lesões. Ideal para quem sofre com tensões musculares e rigidez corporal.
                     </p>
                 </div>
 

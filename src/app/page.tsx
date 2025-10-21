@@ -24,10 +24,12 @@ export default function Home() {
     { nome: "PODOLOGIA", img: "/podologia.jpg", id: "Podologia" },
     { nome: "ESTÉTICA", img: "/estetica.jpg", id: "Estetica" },
     { nome: "PILATES", img: "/pilates.jpg", id: "Pilates" },
-    { nome: "SEITAI", img: "/seitai.jpg", id: "Seitai" },
+    { nome: "NEW SEITAI JAPONESA", img: "/seitai.jpg", id: "Seitai" },
     { nome: "LIBERAÇÃO MIOFACIAL", img: "/liberacao.jpg", id: "LibMioface" },
     { nome: "ACUPUNTURA", img: "/acupuntura.jpg", id: "Acupuntura" },
     { nome: "LOW PRESSURE FITNESS", img: "/lpf.png", id: "LPF" },
+    { nome: "VENTOSATERAPIA", img: "/nuva-60.jpg", id: "Ventosa" },
+    { nome: "AURICULOTERAPIA", img: "/nuva-62.jpg", id: "Auriculoterapia" },
   ];
 
   const especialistas = [
@@ -92,7 +94,7 @@ export default function Home() {
             <FaChevronLeft size={28} />
           </button>
           <div ref={scrollRef} className="w-full overflow-x-auto flex space-x-4 scroll-smooth py-4">
-            {[22, 24, 37, 39, 53, 55].map((num) => (
+            {[16, 17, 22, 24, 37, 39, 45, 47, 51, 53, 55].map((num) => (
               <div key={num} className="flex-shrink-0 w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg">
                 <Image src={`/nuva-${num}.jpg`} alt={`Nuva ${num}`} width={280} height={180} className="object-cover w-full h-full" />
               </div>

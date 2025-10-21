@@ -43,9 +43,8 @@ export default function LPF() {
                 {/* LADO ESQUERDO - TEXTO */}
                 <div className="flex-1 text-left">
                     <p className="text-black text-2xl leading-relaxed">
-                        A Low Pressure Fitness é um método inovador de treinamento físico que combina técnicas de respiração, postura e ativação muscular profunda. Diferente de exercícios tradicionais, a LPF trabalha de forma suave e controlada, focando nos músculos abdominais, lombares e do assoalho pélvico.
+                        LPF é um inovador sistema de treinamento postural e respiratório , que utiliza o conhecimento das rotas fasciais para uma maior ativação dos músculos do CORE, proporcionado aos seus praticantes a regulação do tônus basal e a normalização da PIA (pressão intra-abdominal).
 
-                        Ideal para pessoas que buscam fortalecer o core, melhorar a postura, reduzir dores lombares ou reabilitar o corpo após o parto, a LPF também ajuda na prevenção de disfunções musculares e problemas de pressão intra-abdominal. Com movimentos precisos e respiração estratégica, cada sessão promove força, mobilidade e bem-estar, tornando-se um aliado poderoso para a saúde física e qualidade de vida.
                     </p>
                 </div>
 
@@ -56,6 +55,7 @@ export default function LPF() {
                         <Image
                             src="/lpf.png"
                             alt="Low Pressure Fitness"
+                            fill
                             className="object-cover rounded-2xl"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />

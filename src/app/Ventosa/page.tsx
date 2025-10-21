@@ -3,24 +3,24 @@
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
-export default function Estetica() {
+export default function Ventosa() {
   const servicos = [
-    "Limpeza de pele profunda",
-    "Microagulhamento",
-    "Hidratação facial",
-    "Massagem relaxante corporal",
-    "Drenagem linfática",
-    "Massagem estética funcional",
+    "Alívio de dores musculares e tensionais",
+    "Melhora da oxigenação dos tecidos",
+    "Redução de inflamações e inchaços",
+    "Fortalecimento do sistema imunológico",
+    "Relaxamento fisico e mental",
+    
   ];
 
   return (
     <main
-      id="Estetica"
+      id="Ventosa"
       className="w-full min-h-screen bg-white flex flex-col items-center pt-28 px-6 sm:px-8"
     >
       {/* Título da página */}
       <div className="w-full max-w-6xl text-left mb-10">
-        <h2 className="text-4xl font-bold text-[#1F526F] mb-3">ESTÉTICA</h2>
+        <h2 className="text-4xl font-bold text-[#1F526F] mb-3">VENTOSATERAPIA</h2>
         <div className="h-1 w-32 sm:w-48 bg-[#1F526F]"></div>
       </div>
 
@@ -29,7 +29,8 @@ export default function Estetica() {
         {/* Texto */}
         <div className="flex-1 text-left">
           <p className="text-black text-2xl leading-relaxed">
-            Cada cuidado é pensado de forma personalizada e humanizada, respeitando as necessidades únicas de cada pele e corpo. Trabalhamos com produtos de alta qualidade, tecnologia segura e técnicas modernas que proporcionam bem-estar, equilíbrio e resultados visíveis. Nosso objetivo é que cada atendimento seja uma experiência de relaxamento, autocuidado e valorização da sua beleza natural.
+            Terapia que utiliza copos de sucção para ativar a circulação sanguínea, eliminar toxinas e aliviar tensões musculares. Indicada para dores nas costas, estresse e recuperação muscular.
+
           </p>
         </div>
 
@@ -37,8 +38,8 @@ export default function Estetica() {
         <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
           <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
             <Image
-              src="/nuva-36.jpg"
-              alt="Estética"
+              src="/nuva-88.jpg"
+              alt="Ventosaterapia"
               fill
               className="object-cover rounded-2xl"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -61,7 +62,7 @@ export default function Estetica() {
       </div>
 
       <a
-        href="https://wa.me/554788179227?text=Olá,%20quero%20agendar%20meu%20horário!"
+        href="https://wa.me/554896791449?text=Olá,%20quero%20agendar%20meu%20horário!"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-12 mb-12 px-12 py-5 border-2 border-[#1F526F] text-[#1F526F] font-semibold rounded hover:bg-[#1F526F] hover:text-white transition text-3xl"

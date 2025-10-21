@@ -40,19 +40,18 @@ export default function Acupuntura() {
                 {/* LADO ESQUERDO - TEXTO */}
                 <div className="flex-1 text-left">
                     <p className="text-black text-2xl leading-relaxed">
-                        A Acupuntura é uma técnica milenar da Medicina Tradicional Chinesa que promove o equilíbrio do corpo e da mente através da estimulação de pontos específicos na pele com agulhas muito finas.
-                        Ela atua na regulação do sistema nervoso, melhora da circulação energética e fortalecimento do organismo, sendo uma aliada poderosa no tratamento de dores, stress e desequilíbrios emocionais.
-                        Mais do que aliviar sintomas, a acupuntura busca restaurar a harmonia natural do corpo, proporcionando bem-estar físico e mental de forma segura e eficaz.
+                        Técnica milenar da medicina tradicional chinesa que utiliza estímulos em pontos específicos do corpo para tratar dores, ansiedade, insônia e distúrbios emocionais. Promove equilíbrio físico, mental e energético.
+
                     </p>
                 </div>
 
                 {/* LADO DIREITO - IMAGEM */}
 
-                
+
                 <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
                     <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
-                            src="/acupuntura.jpg"
+                            src="/nuva-01.jpg"
                             alt="Acupuntura"
                             fill
                             className="object-cover rounded-2xl"

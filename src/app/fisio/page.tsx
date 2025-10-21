@@ -39,15 +39,16 @@ export default function Fisioterapia() {
         {/* LADO ESQUERDO - TEXTO */}
         <div className="flex-1 text-left">
           <p className="text-black text-2xl leading-relaxed">
-            Nossa equipe de fisioterapeutas altamente qualificados oferece
-            tratamentos personalizados para cada paciente, com foco na
-            reabilitação, prevenção de lesões e melhoria da qualidade de vida.
+
+            Cuidar de você é o nosso propósito!
+            <br />
+             A fisioterapia é um momento de atenção, acolhimento e cuidado - onde cada detalhe do tratamento é pensado para aliviar dores, restaurar funções e devolver bem estar ao seu dia a dia. Atuamos nas áreas ortopédica, neurológica e respiratória, oferecendo intervenções para cada necessidade.
           </p>
         </div>
 
         {/* LADO DIREITO - IMAGEM */}
 
-        
+
 
         <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
           <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">

@@ -23,7 +23,8 @@ export default function Seitai() {
 
             <div className="w-full max-w-6xl text-left mb-10">
                 <h2 className="text-4xl font-bold text-[#1F526F] mb-3">
-                    SEITAI
+                    NEW SEITAI JAPONESA
+
                 </h2>
                 {/* Linha decorativa abaixo do título */}
                 <div className="h-1 w-32 sm:w-78 bg-[#1F526F]"></div>
@@ -40,7 +41,9 @@ export default function Seitai() {
                 {/* LADO ESQUERDO - TEXTO */}
                 <div className="flex-1 text-left">
                     <p className="text-black text-2xl leading-relaxed">
-                        O Seitai é uma técnica japonesa voltada para o equilíbrio do corpo e da mente. Através de movimentos suaves e ajustamentos posturais, ele ajuda a corrigir desalinhamentos, aliviar tensões e restaurar a vitalidade do corpo. Mais do que um tratamento físico, o Seitai promove um bem-estar completo, melhorando a postura, a circulação, a mobilidade e a energia vital. É ideal para quem busca prevenção de dores, relaxamento profundo e harmonia entre corpo e mente.
+                        O New SeiTai (Quiropraxia Japonesa) é um método inovador focado no tratamento de dores crônicas, que visa o alinhamento corporal através da correção de falhas e desequilíbrios posturais, utilizando manobras manuais e ferramentas específicas (martelos e instrumentos) para ajustes vertebrais e articulares imediatos e indolores. A técnica se baseia no ajuste pélvico, considerado o centro do equilíbrio corporal, e trata desvios causados por traumatismos ou má postura, liberando o sistema musculoesquelético e sendo indicada para diversas condições como hérnia de disco, DTM, cefaleia tensional e outras disfunções articulares.
+
+
                     </p>
                 </div>
 
@@ -48,7 +51,7 @@ export default function Seitai() {
                 <div className="flex-1 flex justify-center md:justify-end w-full mt-6 md:mt-0">
                     <div className="relative w-full h-64 sm:h-72 md:h-96 rounded-2xl shadow-lg">
                         <Image
-                            src="/seitai.jpg"
+                            src="/nuva-41.jpg"
                             alt="Seitai"
                             fill
                             className="object-cover rounded-2xl"
