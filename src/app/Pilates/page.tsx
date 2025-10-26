@@ -97,7 +97,7 @@ export default function Pilates() {
                 ))}
             </div>
             <a
-                href="https://wa.me/554896791449?text=Olá,%20quero%20agendar%20meu%20horário!"
+                href="https://wa.me/5548996513245?text=Olá,%20quero%20agendar%20meu%20horário!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-12 mb-50 px-12 py-5 border-2 border-[#1F526F] text-[#1F526F] font-semibold rounded hover:bg-[#1F526F] hover:text-white transition text-3xl"
