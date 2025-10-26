@@ -24,7 +24,7 @@ export default function Footer() {
 
             {/* Ícones de redes sociais */}
             <div className="flex gap-4 mt-2">
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/nuvaclinica/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={24} />
               </a>
               <a href="https://wa.me/5548996513245" target="_blank" rel="noopener noreferrer">
